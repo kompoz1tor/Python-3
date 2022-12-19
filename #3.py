@@ -16,16 +16,17 @@ for i in range(number):
     real_number = uniform(0, 11)
     list.append(round(real_number, 2))
 
-min = list[0]
+min = list[0] - int(list[0])
 max = 0
 
 for i in range(len(list)):
-    if max < list[i]:
-        max = list[i]
-    if min > list[i]:
-        min = list[i]
-difference = (max - int(max)) - (min - int(min))
+    y = list[i] - int(list[i])
+    if max < y:
+        max = y
+    if min > y:
+        min = y
+difference = (max  - min)
 
 print(f'исходный список: {list}')
 print(f'максимальное значение: {max} , минимальное значение: {min}')
-print(abs(round(difference,2)))
+print((round(difference,2)))

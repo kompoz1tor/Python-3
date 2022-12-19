@@ -8,17 +8,17 @@
 import random
 from random import randint
 
-number = int(input('Введите размер списка: '))
+lenght_list = int(input('Введите размер списка: '))
 list = []
 current_list = []
 
-for i in range(number):
+for i in range(lenght_list):
     list.append(randint(1, 11))
 
 for i in range(len(list)):
-    while i < len(list)/2 and number > len(list)/2:
-        number = number - 1
-        a = list[i] * list[number]
+    while i < len(list)/2 and lenght_list > len(list)/2:
+        lenght_list = lenght_list - 1
+        a = list[i] * list[lenght_list]
         current_list.append(a)
         i += 1
 
